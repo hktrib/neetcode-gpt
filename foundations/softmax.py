@@ -13,8 +13,7 @@ class Solution:
         # z -= np.max(z)
         # print(z)
 
-        z -= np.max(z)
 
-        return np.round(np.exp(z) / np.sum(np.exp(z)), 4)
+        return np.round(np.exp(z - np.max(z)) / np.sum(np.exp(z - np.max(z))), 4)
 
         pass
